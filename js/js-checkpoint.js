@@ -79,7 +79,7 @@
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
 
-[dot, dash, pause, dash, dot]
+// [dot, dash, pause, dash, dot]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -92,7 +92,7 @@
 // bands[0].shift()
 // bands[1][3] = "Ringo"
 
-// [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
+[["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
 
 // ==============================================================================
 
