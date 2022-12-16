@@ -6,6 +6,7 @@
 // 11
 // 9
 // ==============================================================================
+// 
 // const arr = [17, 15, 13, 11, 9]
 // for (let i = 0; i < arr.length; i++) {
 //   console.log(arr)
@@ -38,6 +39,7 @@
 //     16
 //     ...
 // ==============================================================================
+// 
 // for (let i = 0; i < 101; i++) {
 //   if (i % 3 === 0 && i % 5 === 0) {
 //     console.log("FizzBuzz")
@@ -56,18 +58,21 @@
 
 // 3. What will the contents of the array below be after the code sample is
 // executed? 
-let numbers = [2, 4, 6, 8]
-numbers.pop()
+// let numbers = [2, 4, 6, 8]
+// numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
 
 // 2, 4, 6
-//  
+// 2, 4, 6, 8, 10 
+// 3, 2, 4, 6, 8
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+
+// ["dot", "dash", "pause", "dash", "dot"]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -79,6 +84,9 @@ numbers.pop()
 // bands[bands.length - 1].pop()
 // bands[0].shift()
 // bands[1][3] = "Ringo"
+
+// N/A console didn't output anything
+// I expected  --> [["Mick", "Ringo", "Ronnie", "Ringo"]["Paul", "John", "Pete"]]
 
 // ==============================================================================
 
@@ -107,6 +115,11 @@ const users = {
 // 6e. console.log how many favourite numbers lordBuckethead has
 // ==============================================================================
 
+// 6a. console.log(users.theresa.party)
+// 6b. console.log(users.lordBuckethead.party)
+// 6c. console.log(users.mrFishFinger.party = "birds eye")
+// 6d. console.log(users.lordBuckethead.favoriteNumbers = [12, 14, 85, 42])
+// 6e. console.log(users.lordBuckethead.favoriteNumbers.length)
 
 // ==============================================================================
 // 7. The Movie Database
@@ -120,6 +133,13 @@ const users = {
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
 // ==============================================================================
 
+// const favMovie = {
+//   title: "Spirited Away",
+//   duration: 185,
+//   cast: ["Rumi Hiiragi", "Miyu Irino", "Mari Natsuki"]
+// }
+// console.log(`${title} lasts for ${duration} minutes and stars ${cast[0]}, ${cast[1]} and ${cast[2]}.`)
+// my console is being weird, why does it say title in above line not defined?
 
 // ==============================================================================
 // 8. Pluraliser
@@ -134,6 +154,14 @@ const users = {
 // console.log(pluralise('goose', 3))   // -> 3 geese
 // ==============================================================================
 
+// const pluralise = function (noun, number) {
+//     return number + " " + noun + "s"
+// }
+// console.log(pluralise("dog", 1)) --> don't remember how to omit s here
+// console.log(pluralise('cat', 5))     
+// console.log(pluralise('hamster', 2)) 
+// console.log(pluralise('sheep', 6))   
+// console.log(pluralise('goose', 3)) 
 
 // ==============================================================================
 // 9. Lengths
