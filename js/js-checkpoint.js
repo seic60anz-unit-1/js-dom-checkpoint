@@ -24,19 +24,19 @@
 //    - If the number is divisible by both 3 and 5, print `"FizzBuzz"`.
 //    - If the number does not meet any of the above conditions, just print the number.
 
-let i = 1;
-while (i <= 100) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log('FizzBuzz');
-  } else if (i % 3 === 0) {
-    console.log('Fizz');
-  } else if (i % 5 === 0) {
-    console.log('Buzz');
-  } else {
-    console.log(i)
-  }
-  i++
-}
+// let i = 1;
+// while (i <= 100) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else {
+//     console.log(i)
+//   }
+//   i++
+// }
 
 
 
@@ -72,7 +72,7 @@ while (i <= 100) {
 // numbers.push(10)
 // numbers.unshift(3)
 
-// [3, 2, 4, 6, 10]
+[3, 2, 4, 6, 10]
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
