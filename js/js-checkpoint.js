@@ -5,6 +5,12 @@
 // 13
 // 11
 // 9
+
+
+// for (let i = 17; i >= 9; i -= 2) {
+//   console.log(i)
+// }
+
 // ==============================================================================
 
 
@@ -34,6 +40,20 @@
 //     FizzBuzz
 //     16
 //     ...
+
+
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz")
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz")
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz")
+//   } else {
+//     console.log(i)
+//   }
+// }
+
 // ==============================================================================
 
 
@@ -47,11 +67,18 @@
 // numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
+// console.log(numbers)
+
+// expected answer = [3, 2, 4, 6, 10]
+// actual answer = [3, 2, 4, 6, 10]
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+
+// expected answer = [dot, dash, pause, dash, dot]
+// actual answer = [dot, dash, pause, dash, dot]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -63,6 +90,11 @@
 // bands[bands.length - 1].pop()
 // bands[0].shift()
 // bands[1][3] = "Ringo"
+// console.log(bands)
+
+
+// expected answer = [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
+// actual answer = [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
 
 // ==============================================================================
 
@@ -89,6 +121,17 @@ const users = {
 // 6c. change mrFishFinger's party to "birds eye"
 // 6d. add the number 42 to lordBuckethead's favourite numbers
 // 6e. console.log how many favourite numbers lordBuckethead has
+
+// console.log(users.theresa.party)
+// console.log(users.lordBuckethead.party)
+// users.mrFishFinger.party = "birds eye"
+// // test
+// console.log(users.mrFishFinger.party)
+// users.lordBuckethead.favoriteNumbers.push(42)
+// // test
+// console.log(users.lordBuckethead.favoriteNumbers)
+// console.log(users.lordBuckethead.favoriteNumbers.length)
+
 // ==============================================================================
 
 
@@ -102,6 +145,27 @@ const users = {
 // Print out the movie information **in a single string** like so: "Puff the
 // Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
+
+// const favMovie = {
+//   title: "The Maze Runner",
+//   duration: 1.88,
+//   cast: ["Dylan O'Brien", "Thomas Brodie-Sangster", "Kaya Scodelario", "Ki Hong Lee"]
+// }
+
+// output = ""
+// const cast = favMovie.cast
+// for (let i = 0; i < cast.length; i++) {
+//   if (i === cast.length - 2) {
+//     output += cast[i] + " and "
+//   } else if (i === cast.length - 1) {
+//     output += cast[i]
+//   } else {
+//     output += cast[i] + ", "
+//   }
+// }
+
+// console.log(`${favMovie.title} lasts for ${favMovie.duration} hours and stars ${output}.`)
+
 // ==============================================================================
 
 
@@ -111,11 +175,31 @@ const users = {
 // - takes 2 arguments, a noun and a number.
 // - returns the number and the pluralised form of the noun like "5 cats" or "1 dog".
 // - **Bonus**: Make it handle a few collective nouns like "sheep" and "goose".
+
+// const pluralise = function(noun, number) {
+//   if (noun === "sheep") {
+//     return `${number} ${noun}`
+//   } else if (noun === "goose") {
+//     if (number > 1) {
+//       return `${number} geese`
+//     } else {
+//       return `${number} goose`
+//     } 
+//   } else {
+//     if (number > 1) {
+//       return `${number} ${noun}s`
+//     } else {
+//       return `${number} ${noun}`
+//     }
+//   }
+// }
+// // test
 // console.log(pluralise('dog', 1))     // -> 1 dog
 // console.log(pluralise('cat', 5))     // -> 5 cats
 // console.log(pluralise('hamster', 2)) // -> 2 hamsters
 // console.log(pluralise('sheep', 6))   // -> 6 sheep
 // console.log(pluralise('goose', 3))   // -> 3 geese
+
 // ==============================================================================
 
 
@@ -126,6 +210,17 @@ const users = {
 // - uses an array method, not a `for` loop
 // - returns an array of numbers where each number is the length of the
 //   corresponding string
+
+// const lengths = function(stringArray) {
+//   let lengthArray = []
+//   stringArray.forEach(function(string) {
+//     lengthArray.push(string.length)
+//   })
+//   return lengthArray
+// }
+// // test
+// console.log(lengths(["hello", "there", "my", "name", "is", "Nicole"]))
+
 // ==============================================================================
 
 
@@ -239,4 +334,36 @@ const products = [
 // 10b. Using an array method, sort the array alphabetically by product name
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
+
+// const lessThan10 = products.filter(function(product) {
+//   if (product.price < 10) {
+//     return product
+//   }
+// })
+// // test
+// console.log(lessThan10)
+
+// const compare = function(name1, name2) {
+//   // Use toLowerCase() to ignore character casing
+//   name1 = name1.name.toLowerCase();
+//   name2 = name2.name.toLowerCase();
+
+//   let comparison = 0;
+//   if (name1 > name2) {
+//     comparison = 1;
+//   } else if (name1 < name2) {
+//     comparison = -1;
+//   }
+//   return comparison;
+// }
+// // test
+// console.log(products.sort(compare))
+
+// let totalPrice = 0
+// for (let product of products) {
+//   totalPrice += product.price
+// }
+
+// console.log(totalPrice)
+
 // ==============================================================================
