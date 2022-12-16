@@ -5,9 +5,13 @@
 // 13
 // 11
 // 9
+
 // ==============================================================================
+ex1 = [17,15,13,11,9]
 
-
+for ( let i = 0; i < ex1.length; i++ ) {    
+  console.log( ex1[ i ] );
+}​​
 // ==============================================================================
 // 2. Fizz-Buzz
 //    Implement code that does the following.
@@ -36,6 +40,16 @@
 //     ...
 // ==============================================================================
 
+for (i = 1; i < 101; i++) {
+  if (i % 3 === 0) {
+    console.log('fizz')
+  } else if (i % 5 === 0) {
+    console.log('buzz')
+  } else if (i % 3 === 0 && i % 5 === 0){
+    console.log('Fizz Buzz')
+  } else {
+    console.log(i)
+  }}
 
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
@@ -45,13 +59,20 @@
 // executed? 
 // let numbers = [2, 4, 6, 8]
 // numbers.pop()
+// GUESS:  [2,4,6,8]
+// Answer: [2, 4, 6]
 // numbers.push(10)
+// GUESS: [10,2,4,6] 
+// Answer: [2, 4, 6, 8, 10] // push adds it to the end
 // numbers.unshift(3)
+// ?? Not sure what unshift is
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+// ['dot',pause,'dot,' dash ']
+//  'dash'
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -59,10 +80,16 @@
 // let beatles = ["Paul", "John", "George", "Pete"]
 // let stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
 // bands.push(beatles)
+// bands = ["Paul", "John", "George", "Pete"]
 // bands.unshift(stones)
+// Need to lookup unshift
 // bands[bands.length - 1].pop()
+// Removes last bands member
+// bands = ["Paul", "John", "George"]
 // bands[0].shift()
+// Need to figure out what bands is
 // bands[1][3] = "Ringo"
+// ["Paul", "Ringo" , "John", "George", "Ringo"]
 
 // ==============================================================================
 
@@ -85,10 +112,15 @@ const users = {
 }
 // Using the object above:
 // 6a. console.log theresa's party (i.e. the string "Conservative")
+// console.log(users.[1][1])
 // 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
+// console.log(users.[2][1])
 // 6c. change mrFishFinger's party to "birds eye"
+// users.[2][1] = birds eye
 // 6d. add the number 42 to lordBuckethead's favourite numbers
+// users[2][1] = 'birds eye'
 // 6e. console.log how many favourite numbers lordBuckethead has
+// // console.log(users.[3][1])
 // ==============================================================================
 
 
