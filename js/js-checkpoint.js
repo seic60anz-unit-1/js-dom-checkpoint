@@ -5,6 +5,13 @@
 // 13
 // 11
 // 9
+
+// for (let i = 17; i >= 9; i = i - 2) {
+//   console.log(i);
+// }
+
+
+
 // ==============================================================================
 
 
@@ -16,6 +23,23 @@
 //    - If the number is divisible by 5, print `"Buzz"`.
 //    - If the number is divisible by both 3 and 5, print `"FizzBuzz"`.
 //    - If the number does not meet any of the above conditions, just print the number.
+
+// let i = 1;
+// while (i <= 100) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else {
+//     console.log(i)
+//   }
+//   i++
+// }
+
+
+
 //    Your output should look something like this:
 //     1
 //     2
@@ -48,10 +72,14 @@
 // numbers.push(10)
 // numbers.unshift(3)
 
+// [3, 2, 4, 6, 10]
+
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+
+// [dot, dash, pause, dash, dot]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -63,6 +91,8 @@
 // bands[bands.length - 1].pop()
 // bands[0].shift()
 // bands[1][3] = "Ringo"
+
+// [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
 
 // ==============================================================================
 
@@ -85,10 +115,26 @@ const users = {
 }
 // Using the object above:
 // 6a. console.log theresa's party (i.e. the string "Conservative")
+// console.log(users.theresa.party)
+
+
 // 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
+// console.log(users.lordBuckethead.party)
+
+
 // 6c. change mrFishFinger's party to "birds eye"
+// users.mrFishFinger.party = 'birds eye'
+
+
 // 6d. add the number 42 to lordBuckethead's favourite numbers
+// users.lordBuckethead.favoriteNumbers.push(42)
+
+
 // 6e. console.log how many favourite numbers lordBuckethead has
+// console.log(users.lordBuckethead.favoriteNumbers.length)
+
+
+
 // ==============================================================================
 
 
@@ -98,10 +144,28 @@ const users = {
 // - title (a string)
 // - duration (a number)
 // - cast (an array of strings)
+// const favMovie = {title: 'Good Morning', duration: 150, cast: ['Tom', 'Paul', 'John']}
 
-// Print out the movie information **in a single string** like so: "Puff the
-// Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
+
+// Print out the movie information **in a single string** like so:
+// "Puff the Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
+// let stars = ""
+// for (i in favMovie.cast) {
+//   if (favMovie.cast.length === 1) {
+//     stars = favMovie.cast[i]
+//   } else if (parseInt(i) === favMovie.cast.length - 1) {
+//     stars = stars + ' and ' + favMovie.cast[i]
+//   } else if (parseInt(i) === favMovie.cast.length - 2) {
+//     stars = stars + favMovie.cast[i]
+//   } else if (parseInt(i) != favMovie.cast.length - 1) {
+//     stars = stars + favMovie.cast[i] + ', '
+//   }
+// }
+
+// console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars ${stars}.`)
+
+
 // ==============================================================================
 
 
@@ -110,12 +174,39 @@ const users = {
 // Write a function named `pluralise` that:
 // - takes 2 arguments, a noun and a number.
 // - returns the number and the pluralised form of the noun like "5 cats" or "1 dog".
+
+// console.log(pluralise('dog', 1))     // -> 1 dog
+// console.log(pluralise('cat', 5))     // -> 5 cats
+// console.log(pluralise('hamster', 2)) // -> 2 hamsters
+// console.log(pluralise('sheep', 6))   // -> 6 sheep
+// console.log(pluralise('goose', 3))   // -> 3 geese
+
 // - **Bonus**: Make it handle a few collective nouns like "sheep" and "goose".
 // console.log(pluralise('dog', 1))     // -> 1 dog
 // console.log(pluralise('cat', 5))     // -> 5 cats
 // console.log(pluralise('hamster', 2)) // -> 2 hamsters
 // console.log(pluralise('sheep', 6))   // -> 6 sheep
 // console.log(pluralise('goose', 3))   // -> 3 geese
+
+// let colNouns = {singular: ['sheep', 'goose', 'mouse'], 
+// plural: ['sheep', 'geese', 'mice']}
+
+// console.log(colNouns.singular[1])
+// const pluralise = function(noun, num) {
+//   if (num <= 0 || num > 1) {
+//     for (let i in colNouns.singular) {
+//       if (colNouns.singular[i] === noun) {
+//         noun = colNouns.plural[i]
+//         return num + " " + noun
+//       }
+//     } 
+//     noun = noun + 's'
+//   }
+//   return num + " " + noun
+// }
+
+
+
 // ==============================================================================
 
 
@@ -126,6 +217,19 @@ const users = {
 // - uses an array method, not a `for` loop
 // - returns an array of numbers where each number is the length of the
 //   corresponding string
+
+// const length = function(array) {
+//   i = 0;
+//   result = []
+//   while (i < array.length) {
+//     result.push (array[i].length)
+//     i++
+//   }
+//   return result
+// }
+
+
+
 // ==============================================================================
 
 
@@ -236,7 +340,25 @@ const products = [
 
 // 10a. Using an array method, create a new array of products with a price less
 //      than 10
+
+const priceLess10 = [];
+for (let i of products) {
+  if (i.price < 10) {
+    priceLess10.push(i);
+  }
+}
+
+
+
 // 10b. Using an array method, sort the array alphabetically by product name
+const proByAlp = [];
+proByAlp = products.sort(function(a,b){
+  
+})
+
+
+
+
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
 // ==============================================================================
