@@ -6,7 +6,10 @@
 // 11
 // 9
 // ==============================================================================
-
+// const arr = [17, 15, 13, 11, 9]
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr)
+// }
 
 // ==============================================================================
 // 2. Fizz-Buzz
@@ -35,7 +38,17 @@
 //     16
 //     ...
 // ==============================================================================
-
+// for (let i = 0; i < 101; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz")
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz")
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz")
+//   } else {
+//   console.log(i)
+//   }
+// }
 
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
@@ -43,10 +56,13 @@
 
 // 3. What will the contents of the array below be after the code sample is
 // executed? 
-// let numbers = [2, 4, 6, 8]
-// numbers.pop()
+let numbers = [2, 4, 6, 8]
+numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
+
+// 2, 4, 6
+//  
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
