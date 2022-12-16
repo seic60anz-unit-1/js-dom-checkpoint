@@ -6,7 +6,10 @@
 // 11
 // 9
 // ==============================================================================
-
+const arr = [17, 15, 13, 11, 9]
+for ( el of arr ) {
+  console.log(el)
+} 
 
 // ==============================================================================
 // 2. Fizz-Buzz
@@ -35,7 +38,20 @@
 //     16
 //     ...
 // ==============================================================================
+// const endingNumber = 101;
 
+// for ( let i = 1; i < endingNumber; i++) {
+//   if ( i % 3 == 0) {
+//     console.log(`Fizz`)
+//   }
+//   if ( i % 5 == 0) {
+//     console.log(`Buzz`)
+//   }
+//   if ( i % 3 == 0 && i % 5 == 0) {
+//     console.log(`FizzBuzz`)
+//   }
+//     else (console.log(i))
+// }
 
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
@@ -47,11 +63,16 @@
 // numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
+// console.log(numbers)
+
+// ANSWER [3, 2, 4, 6, 10]
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+
+// ANSWER ['dot', ' dash ', 'pause', ' dash ', 'dot']
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -63,6 +84,8 @@
 // bands[bands.length - 1].pop()
 // bands[0].shift()
 // bands[1][3] = "Ringo"
+
+// ANSWER 
 
 // ==============================================================================
 
