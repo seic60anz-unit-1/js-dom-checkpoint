@@ -292,3 +292,4 @@ const products = [
 // all the products' prices and console.log it
 // ==============================================================================
 
+// 10a. products.concat.
