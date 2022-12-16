@@ -188,22 +188,22 @@ const users = {
 // console.log(pluralise('sheep', 6))   // -> 6 sheep
 // console.log(pluralise('goose', 3))   // -> 3 geese
 
-let colNouns = {singular: ['sheep', 'goose', 'mouse'], 
-plural: ['sheep', 'geese', 'mice']}
+// let colNouns = {singular: ['sheep', 'goose', 'mouse'], 
+// plural: ['sheep', 'geese', 'mice']}
 
-console.log(colNouns.singular[1])
-const pluralise = function(noun, num) {
-  if (num <= 0 || num > 1) {
-    for (let i in colNouns.singular) {
-      if (colNouns.singular[i] === noun) {
-        noun = colNouns.plural[i]
-        return num + " " + noun
-      }
-    } 
-    noun = noun + 's'
-  }
-  return num + " " + noun
-}
+// console.log(colNouns.singular[1])
+// const pluralise = function(noun, num) {
+//   if (num <= 0 || num > 1) {
+//     for (let i in colNouns.singular) {
+//       if (colNouns.singular[i] === noun) {
+//         noun = colNouns.plural[i]
+//         return num + " " + noun
+//       }
+//     } 
+//     noun = noun + 's'
+//   }
+//   return num + " " + noun
+// }
 
 
 
@@ -217,6 +217,24 @@ const pluralise = function(noun, num) {
 // - uses an array method, not a `for` loop
 // - returns an array of numbers where each number is the length of the
 //   corresponding string
+
+const length = function(array) {
+  i = 0;
+  result = []
+  while (i < array.length) {
+    result.push (array[i].length)
+    i++
+  }
+  return result
+}
+
+
+
+
+
+
+
+
 // ==============================================================================
 
 
