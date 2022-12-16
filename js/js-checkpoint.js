@@ -144,26 +144,26 @@ const users = {
 // - title (a string)
 // - duration (a number)
 // - cast (an array of strings)
-const favMovie = {title: 'Good Morning', duration: 150, cast: ['Tom', 'Paul', 'John']}
+// const favMovie = {title: 'Good Morning', duration: 150, cast: ['Tom', 'Paul', 'John']}
 
 
 // Print out the movie information **in a single string** like so:
 // "Puff the Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
-let stars = ""
-for (i in favMovie.cast) {
-  if (favMovie.cast.length === 1) {
-    stars = favMovie.cast[i]
-  } else if (parseInt(i) === favMovie.cast.length - 1) {
-    stars = stars + ' and ' + favMovie.cast[i]
-  } else if (parseInt(i) === favMovie.cast.length - 2) {
-    stars = stars + favMovie.cast[i]
-  } else if (parseInt(i) != favMovie.cast.length - 1) {
-    stars = stars + favMovie.cast[i] + ', '
-  }
-}
+// let stars = ""
+// for (i in favMovie.cast) {
+//   if (favMovie.cast.length === 1) {
+//     stars = favMovie.cast[i]
+//   } else if (parseInt(i) === favMovie.cast.length - 1) {
+//     stars = stars + ' and ' + favMovie.cast[i]
+//   } else if (parseInt(i) === favMovie.cast.length - 2) {
+//     stars = stars + favMovie.cast[i]
+//   } else if (parseInt(i) != favMovie.cast.length - 1) {
+//     stars = stars + favMovie.cast[i] + ', '
+//   }
+// }
 
-console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars ${stars}.`)
+// console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars ${stars}.`)
 
 
 // ==============================================================================
@@ -174,12 +174,39 @@ console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars 
 // Write a function named `pluralise` that:
 // - takes 2 arguments, a noun and a number.
 // - returns the number and the pluralised form of the noun like "5 cats" or "1 dog".
+
+// console.log(pluralise('dog', 1))     // -> 1 dog
+// console.log(pluralise('cat', 5))     // -> 5 cats
+// console.log(pluralise('hamster', 2)) // -> 2 hamsters
+// console.log(pluralise('sheep', 6))   // -> 6 sheep
+// console.log(pluralise('goose', 3))   // -> 3 geese
+
 // - **Bonus**: Make it handle a few collective nouns like "sheep" and "goose".
 // console.log(pluralise('dog', 1))     // -> 1 dog
 // console.log(pluralise('cat', 5))     // -> 5 cats
 // console.log(pluralise('hamster', 2)) // -> 2 hamsters
 // console.log(pluralise('sheep', 6))   // -> 6 sheep
 // console.log(pluralise('goose', 3))   // -> 3 geese
+
+let colNouns = {singular: ['sheep', 'goose', 'mouse'], 
+plural: ['sheep', 'geese', 'mice']}
+
+console.log(colNouns.singular[1])
+const pluralise = function(noun, num) {
+  if (num <= 0 || num > 1) {
+    for (let i in colNouns.singular) {
+      if (colNouns.singular[i] === noun) {
+        noun = colNouns.plural[i]
+        return num + " " + noun
+      }
+    } 
+    noun = noun + 's'
+  }
+  return num + " " + noun
+}
+
+
+
 // ==============================================================================
 
 
