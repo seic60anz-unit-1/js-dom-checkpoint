@@ -6,9 +6,9 @@
 // 11
 // 9
 
-for (let i = 17; i >= 9; i = i - 2) {
-  console.log(i);
-}
+// for (let i = 17; i >= 9; i = i - 2) {
+//   console.log(i);
+// }
 
 
 
@@ -24,19 +24,19 @@ for (let i = 17; i >= 9; i = i - 2) {
 //    - If the number is divisible by both 3 and 5, print `"FizzBuzz"`.
 //    - If the number does not meet any of the above conditions, just print the number.
 
-// let i = 1;
-// while (i <= 100) {
-//   if (i % 3 === 0 && i % 5 === 0) {
-//     console.log('FizzBuzz');
-//   } else if (i % 3 === 0) {
-//     console.log('Fizz');
-//   } else if (i % 5 === 0) {
-//     console.log('Buzz');
-//   } else {
-//     console.log(i)
-//   }
-//   i++
-// }
+let i = 1;
+while (i <= 100) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  } else {
+    console.log(i)
+  }
+  i++
+}
 
 
 
