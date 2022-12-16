@@ -218,20 +218,15 @@ const users = {
 // - returns an array of numbers where each number is the length of the
 //   corresponding string
 
-const length = function(array) {
-  i = 0;
-  result = []
-  while (i < array.length) {
-    result.push (array[i].length)
-    i++
-  }
-  return result
-}
-
-
-
-
-
+// const length = function(array) {
+//   i = 0;
+//   result = []
+//   while (i < array.length) {
+//     result.push (array[i].length)
+//     i++
+//   }
+//   return result
+// }
 
 
 
@@ -345,7 +340,25 @@ const products = [
 
 // 10a. Using an array method, create a new array of products with a price less
 //      than 10
+
+const priceLess10 = [];
+for (let i of products) {
+  if (i.price < 10) {
+    priceLess10.push(i);
+  }
+}
+
+
+
 // 10b. Using an array method, sort the array alphabetically by product name
+const proByAlp = [];
+proByAlp = products.sort(function(a,b){
+  
+})
+
+
+
+
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
 // ==============================================================================
