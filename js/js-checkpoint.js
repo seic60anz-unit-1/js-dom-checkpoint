@@ -72,14 +72,14 @@
 // numbers.push(10)
 // numbers.unshift(3)
 
-[3, 2, 4, 6, 10]
+// [3, 2, 4, 6, 10]
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
 
-// [dot, dash, pause, dash, dot]
+[dot, dash, pause, dash, dot]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
