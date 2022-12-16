@@ -92,7 +92,7 @@
 // bands[0].shift()
 // bands[1][3] = "Ringo"
 
-[["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
+// [["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
 
 // ==============================================================================
 
@@ -115,23 +115,23 @@ const users = {
 }
 // Using the object above:
 // 6a. console.log theresa's party (i.e. the string "Conservative")
-// console.log(users.theresa.party)
+console.log(users.theresa.party)
 
 
 // 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
-// console.log(users.lordBuckethead.party)
+console.log(users.lordBuckethead.party)
 
 
 // 6c. change mrFishFinger's party to "birds eye"
-// users.mrFishFinger.party = 'birds eye'
+users.mrFishFinger.party = 'birds eye'
 
 
 // 6d. add the number 42 to lordBuckethead's favourite numbers
-// users.lordBuckethead.favoriteNumbers.push(42)
+users.lordBuckethead.favoriteNumbers.push(42)
 
 
 // 6e. console.log how many favourite numbers lordBuckethead has
-// console.log(users.lordBuckethead.favoriteNumbers.length)
+console.log(users.lordBuckethead.favoriteNumbers.length)
 
 
 
