@@ -172,6 +172,13 @@ const users = {
 //   corresponding string
 // ==============================================================================
 
+// const lengths = function () {
+//   const array = ["hi", "go", "to"]
+//   const arrayCharas = (array[0].length) + (array[1].length) + (array[2].length)
+//   return arrayCharas.length
+// }
+// lengths()
+// yet to figure out how to log 3rd point
 
 // ==============================================================================
 // 10. Product Array
@@ -284,3 +291,4 @@ const products = [
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
 // ==============================================================================
+
