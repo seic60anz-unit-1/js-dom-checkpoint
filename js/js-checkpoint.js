@@ -6,8 +6,12 @@
 // 11
 // 9
 // ==============================================================================
-
-
+const question1 = function(){
+  for (let i =17; i > 8; i = i-2){
+    console.log(i);
+  }
+}
+// question1()
 // ==============================================================================
 // 2. Fizz-Buzz
 //    Implement code that does the following.
@@ -35,15 +39,31 @@
 //     16
 //     ...
 // ==============================================================================
-
-
+const question2 = function(){
+  for (let i =1; i <= 100; i++){
+    if (i % 3 !== 0 && i % 5 !== 0){
+      console.log(i);
+    }else{
+      if (i % 3 === 0){
+        if(i % 5 ===0){
+          console.log("FizzBuzz");
+        }else{
+          console.log("Fizz");
+        }
+      }else{
+        console.log("Buzz");
+      }
+    }
+  }
+}
+// question2();
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
 // with an answer yourself before testing each question out in the console.
 
 // 3. What will the contents of the array below be after the code sample is
 // executed? 
-// let numbers = [2, 4, 6, 8]
+// let numbers = [3, 2, 4, 6, 10]
 // numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
@@ -52,6 +72,7 @@
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+// output: ["dot", "dash", "pause", "dash", "dot"]
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -59,10 +80,15 @@
 // let beatles = ["Paul", "John", "George", "Pete"]
 // let stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
 // bands.push(beatles)
+// output: ["Paul", "John", "George", "Pete"]
 // bands.unshift(stones)
+// output: [["Brian", "Mick", "Keith", "Ronnie", "Charlie"], "Paul", "John", "George", "Pete"]
 // bands[bands.length - 1].pop()
+// output: [["Brian", "Mick", "Keith", "Ronnie", "Charlie"], "Paul", "John", "George"]
 // bands[0].shift()
+// output: [["Mick", "Keith", "Ronnie", "Charlie"], "Paul", "John", "George"]
 // bands[1][3] = "Ringo"
+// ouptput: [["Mick", "Keith", "Ronnie", "Charlie"], "Paul", "John", "George", "Ringo"]
 
 // ==============================================================================
 
@@ -90,7 +116,23 @@ const users = {
 // 6d. add the number 42 to lordBuckethead's favourite numbers
 // 6e. console.log how many favourite numbers lordBuckethead has
 // ==============================================================================
+const question6 = function() {
+  console.log(`Theresa's party is ${users.theresa.party}`);
+  console.log(`Lordbuckethead's party is ${users.lordBuckethead.party}`);
 
+  console.log(`mrFishFinger's party is ${users.mrFishFinger.party}`);
+
+  users.mrFishFinger.party = "birds eye";
+  console.log(`mrFishFinger's new party is ${users.mrFishFinger.party}`);
+
+  console.log(`Lodrdbuckethead's favourte numbers are ${users.lordBuckethead.favoriteNumbers}`);
+  users.lordBuckethead.favoriteNumbers.push(42);
+  console.log(`Lodrdbuckethead's new favourte numbers are ${users.lordBuckethead.favoriteNumbers}`);
+
+  const sumFavouriteNumbers = users.lordBuckethead.favoriteNumbers.reduce((acc,val)=>acc+val,0);
+  console.log(` lordBuckethead has ${sumFavouriteNumbers} numbers in his favorites.`);
+}
+// question6()
 
 // ==============================================================================
 // 7. The Movie Database
@@ -103,8 +145,36 @@ const users = {
 // Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
 // ==============================================================================
+const myMovie = {
+  title: "Harry Potter and the Sorcerer's Stone",
+  duration: "240 minutes",
+  cast: ["Daniel", "Radcliff", "Emma Watson"]
+}
 
+const question7 = function() {
+  let len = Object.keys(myMovie).length;
+  let output = "";
+  let line1 =" lasts for ";
+  let line2 =" and stars ";
+  let line3 ="."
 
+  console.log(myMovie.title + line1 + myMovie.duration + line2 + myMovie.cast.join(", ") + line3);
+// I FAILED THE TRICKY WAY. MIGHT COME BACK AFTER THE BRUTAL SOLUTION
+//   let myMovieArr = Object.keys(myMovie)
+//   for(let i = 0; i < len; i++){
+//     let key = myMovieArr[i]
+//     if(i = 0){
+//       output += myMovie[key] + line1;
+//     } else if(i = 1){
+//       output += myMovie[key] + line2;
+//     } else if(i = 2){
+//       output += myMovie[key].join(", ") + line3;
+//     }
+//   }
+//   console.log(output);
+}
+
+// question7()
 // ==============================================================================
 // 8. Pluraliser
 // Write a function named `pluralise` that:
@@ -117,8 +187,22 @@ const users = {
 // console.log(pluralise('sheep', 6))   // -> 6 sheep
 // console.log(pluralise('goose', 3))   // -> 3 geese
 // ==============================================================================
+const pluralise = function (noun, number) {
+  let collectives = ["sheep", "goose"];
+  let collectivesPl = ["sheep", "geese"];
+  if (number < 2){
+    console.log(`${number} ${noun}`)
+  }else {
+    if (collectives.includes(noun)) {
+      let index = collectives.indexOf(noun);
+      console.log(`${number} ${collectivesPl[index]}`)
+    } else {
+      console.log(`${number} ${noun}s`)
+    }
+  }
+}
 
-
+// pluralise("cat",2)
 // ==============================================================================
 // 9. Lengths
 // Write a function `lengths` that:
@@ -127,8 +211,11 @@ const users = {
 // - returns an array of numbers where each number is the length of the
 //   corresponding string
 // ==============================================================================
+const lengths = function(arrays){
+  console.log(arrays.map(x=>x.length));
+}
 
-
+// lengths(["Daniel", "Radcliff", "Emma Watson"])
 // ==============================================================================
 // 10. Product Array
 const products = [
