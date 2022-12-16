@@ -7,6 +7,9 @@
 // 9
 // ==============================================================================
 
+// const arr = [17, 15, 13, 11, 9];
+// for (i = 0; i < arr.length; i++)
+// console.log(arr[i])
 
 // ==============================================================================
 // 2. Fizz-Buzz
@@ -37,6 +40,7 @@
 // ==============================================================================
 
 
+
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
 // with an answer yourself before testing each question out in the console.
@@ -47,11 +51,13 @@
 // numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
+// answer = 3, 2, 4, 6, 10
 
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
 // console.log(moreMorse.split(' '))
+// answer = dot, pause, dot, dash
 
 // 5. What will the contents of the `bands` array be after the code sample below
 // is executed?
@@ -66,29 +72,38 @@
 
 // ==============================================================================
 
+// let bands =
+// stones, ['keith', 'ronnie', 'charlie'],
+// beatles, ['john', 'george', 'pete', 'ringo'],
+
 
 // ==============================================================================
 // 6. Lord Buckethead
-const users = {
-  theresa: {
-    party: "Conserative",
-    favoriteNumbers: [12, 42, 75]
-  },
-  lordBuckethead: {
-    party: "Gremloids",
-    favoriteNumbers: [8, 12, 24, 9]
-  },
-  mrFishFinger: {
-    party: "Independent",
-    favoriteNumbers: [12, 14, 85]
-  }
-}
+// const users = {
+//   theresa: {
+//     party: "Conserative",
+//     favoriteNumbers: [12, 42, 75]
+//   },
+//   lordBuckethead: {
+//     party: "Gremloids",
+//     favoriteNumbers: [8, 12, 24, 9]
+//   },
+//   mrFishFinger: {
+//     party: "Independent",
+//     favoriteNumbers: [12, 14, 85]
+//   }
+// }
 // Using the object above:
 // 6a. console.log theresa's party (i.e. the string "Conservative")
+// console.log(users.theresa.party)
 // 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
+// console.log(users.lordBuckethead.party)
 // 6c. change mrFishFinger's party to "birds eye"
+// users.mrFishFinger.party = "birds eye"
 // 6d. add the number 42 to lordBuckethead's favourite numbers
+// users.lordBuckethead.favoriteNumbers[0].add = 42
 // 6e. console.log how many favourite numbers lordBuckethead has
+// console.log(users.lordBuckethead.favouriteNumbers[0])
 // ==============================================================================
 
 
@@ -104,6 +119,8 @@ const users = {
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
 // ==============================================================================
 
+// const favMovie = {title: 'Star Wars', duration: 120, cast: ['Carrie Fisher', 'Harrison Ford', 'Alec Guiness']}
+// console.log(favMovie(`${title} lasts for ${duration} and stars ${cast}`))
 
 // ==============================================================================
 // 8. Pluraliser
@@ -118,6 +135,9 @@ const users = {
 // console.log(pluralise('goose', 3))   // -> 3 geese
 // ==============================================================================
 
+// const pluralise = function (noun, number) {
+ 
+// }
 
 // ==============================================================================
 // 9. Lengths
@@ -128,6 +148,7 @@ const users = {
 //   corresponding string
 // ==============================================================================
 
+// I do not understand this question
 
 // ==============================================================================
 // 10. Product Array
@@ -236,7 +257,16 @@ const products = [
 
 // 10a. Using an array method, create a new array of products with a price less
 //      than 10
+// for (let i = 0; i < products.length; i++) {
+//     if (products[i].price <= 10) {
+//         console.log(products[i])
+//     }
+// }
+
 // 10b. Using an array method, sort the array alphabetically by product name
+// answer =
+// products.sort("name");
+// console.log(products)
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
 // ==============================================================================
