@@ -115,23 +115,23 @@ const users = {
 }
 // Using the object above:
 // 6a. console.log theresa's party (i.e. the string "Conservative")
-console.log(users.theresa.party)
+// console.log(users.theresa.party)
 
 
 // 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
-console.log(users.lordBuckethead.party)
+// console.log(users.lordBuckethead.party)
 
 
 // 6c. change mrFishFinger's party to "birds eye"
-users.mrFishFinger.party = 'birds eye'
+// users.mrFishFinger.party = 'birds eye'
 
 
 // 6d. add the number 42 to lordBuckethead's favourite numbers
-users.lordBuckethead.favoriteNumbers.push(42)
+// users.lordBuckethead.favoriteNumbers.push(42)
 
 
 // 6e. console.log how many favourite numbers lordBuckethead has
-console.log(users.lordBuckethead.favoriteNumbers.length)
+// console.log(users.lordBuckethead.favoriteNumbers.length)
 
 
 
@@ -144,26 +144,26 @@ console.log(users.lordBuckethead.favoriteNumbers.length)
 // - title (a string)
 // - duration (a number)
 // - cast (an array of strings)
-// const favMovie = {title: 'Good Morning', duration: 150, cast: ['Tom', 'Paul', 'John']}
+const favMovie = {title: 'Good Morning', duration: 150, cast: ['Tom', 'Paul', 'John']}
 
 
 // Print out the movie information **in a single string** like so:
 // "Puff the Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
-// let stars = ""
-// for (i in favMovie.cast) {
-//   if (favMovie.cast.length === 1) {
-//     stars = favMovie.cast[i]
-//   } else if (parseInt(i) === favMovie.cast.length - 1) {
-//     stars = stars + ' and ' + favMovie.cast[i]
-//   } else if (parseInt(i) === favMovie.cast.length - 2) {
-//     stars = stars + favMovie.cast[i]
-//   } else if (parseInt(i) != favMovie.cast.length - 1) {
-//     stars = stars + favMovie.cast[i] + ', '
-//   }
-// }
+let stars = ""
+for (i in favMovie.cast) {
+  if (favMovie.cast.length === 1) {
+    stars = favMovie.cast[i]
+  } else if (parseInt(i) === favMovie.cast.length - 1) {
+    stars = stars + ' and ' + favMovie.cast[i]
+  } else if (parseInt(i) === favMovie.cast.length - 2) {
+    stars = stars + favMovie.cast[i]
+  } else if (parseInt(i) != favMovie.cast.length - 1) {
+    stars = stars + favMovie.cast[i] + ', '
+  }
+}
 
-// console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars ${stars}.`)
+console.log(`${favMovie.title} lasts for ${favMovie.duration} minutes and stars ${stars}.`)
 
 
 // ==============================================================================
