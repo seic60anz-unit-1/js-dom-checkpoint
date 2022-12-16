@@ -7,6 +7,10 @@
 // 9
 // ==============================================================================
 
+const array = [17,15,13,11,9]
+for(let i =0; i<array.lengt;i++){
+  console.log(array[i]);
+}
 
 // ==============================================================================
 // 2. Fizz-Buzz
@@ -36,6 +40,17 @@
 //     ...
 // ==============================================================================
 
+for(let i =0;i<100;i++){
+  if(i%3 === 0 && i%5 === 0){
+    console.log("FizzBuzz")
+  } else if (i%3 === 0){
+    console.log("Fizz")
+  } else if (i%5 === 0){
+    console.log("Buzz")
+  } else {
+    console.log(i)
+  }
+}
 
 // ==============================================================================
 // For this section, write your answer in a comment below the question. Come up
@@ -47,7 +62,7 @@
 // numbers.pop()
 // numbers.push(10)
 // numbers.unshift(3)
-
+// console.log(numbers)
 // 4. What is the console output of the code sample below?
 // let morse = ['dot', 'pause', 'dot']
 // let moreMorse = morse.join(' dash ')
@@ -63,9 +78,36 @@
 // bands[bands.length - 1].pop()
 // bands[0].shift()
 // bands[1][3] = "Ringo"
+// console.log(bands)
 
 // ==============================================================================
+// Answer for 3, 4 and 5
 
+// 3. What will the contents of the array below be after the code sample is
+// executed? 
+// Answer
+// let numbers = [2, 4, 6, 8]
+// numbers.pop() => [2, 4, 6]
+// numbers.push(10) => [2, 4, 6, 10]
+// numbers.unshift(3) => [3, 2, 4, 6, 10]
+
+// 4. What is the console output of the code sample below?
+// Answer
+// let morse = ['dot', 'pause', 'dot']
+// let moreMorse = morse.join(' dash ') =>"dot dash pause dash dot"
+// console.log(moreMorse.split(' ')) => [dot, dash, pause, dash, dot]
+
+// 5. What will the contents of the `bands` array be after the code sample below
+// is executed?
+// Answer
+// let bands = []
+// let beatles = ["Paul", "John", "George", "Pete"]
+// let stones = ["Brian", "Mick", "Keith", "Ronnie", "Charlie"]
+// bands.push(beatles) => [["Paul", "John", "George", "Pete"]]
+// bands.unshift(stones) =>[["Brian", "Mick", "Keith", "Ronnie", "Charlie"],["Paul", "John", "George", "Pete"]]
+// bands[bands.length - 1].pop() => [["Brian", "Mick", "Keith", "Ronnie", "Charlie"] ,["Paul", "John", "George"]]
+// bands[0].shift() =>[[ "Mick", "Keith", "Ronnie", "Charlie"],["Paul", "John", "George"]]
+// bands[1][3] = "Ringo" =>[[ "Mick", "Keith", "Ronnie", "Charlie"],["Paul", "John", "George", "Ringo"]]
 
 // ==============================================================================
 // 6. Lord Buckethead
@@ -90,7 +132,19 @@ const users = {
 // 6d. add the number 42 to lordBuckethead's favourite numbers
 // 6e. console.log how many favourite numbers lordBuckethead has
 // ==============================================================================
+// 6a. console.log theresa's party (i.e. the string "Conservative")
+console.log(users.theresa.party)
+// 6b. console.log lordbuckethead's party (i.e. the string "Gremloids")
+console.log(users.lordBuckethead.party)
+// 6c. change mrFishFinger's party to "birds eye"
+users.mrFishFinger.party = "birds eye"
+console.log(users.mrFishFinger.party)
+// 6d. add the number 42 to lordBuckethead's favourite numbers
+users.lordBuckethead.favoriteNumbers.push(42)
+console.log(users.lordBuckethead.favoriteNumbers)
 
+// 6e. console.log how many favourite numbers lordBuckethead has
+console.log(users.lordBuckethead.favoriteNumbers.length)
 
 // ==============================================================================
 // 7. The Movie Database
@@ -103,6 +157,17 @@ const users = {
 // Magic Dragon lasts for 30 minutes and stars Puff, Jackie, and Living
 // Sneezes." _(don't forget the **and** as well as the Oxford Comma)_
 // ==============================================================================
+
+const obj = {
+  title : "Girl with a dragon tattoo",
+  duration: 2.38 ,
+  cast: ["Rooney Mara", "Daniel Craig", "Robin Wright"]
+}
+
+const lastcast = obj.cast.pop()
+const cast = obj.cast.join(", ")+" and "+lastcast
+const statement = `${obj.title} lasts for ${obj.duration} hours and ${cast}.`
+console.log(statement)
 
 
 // ==============================================================================
@@ -118,6 +183,19 @@ const users = {
 // console.log(pluralise('goose', 3))   // -> 3 geese
 // ==============================================================================
 
+const pluralise = function(noun, number){
+  if(noun === "sheep" || noun === "geese"){
+    return `${number} ${noun}`
+  } else {
+    noun += "s"
+    return `${number} ${noun}`
+  }
+}
+console.log(pluralise('dog', 1))     // -> 1 dog
+console.log(pluralise('cat', 5))     // -> 5 cats
+console.log(pluralise('hamster', 2)) // -> 2 hamsters
+console.log(pluralise('sheep', 6))   // -> 6 sheep
+console.log(pluralise('goose', 3))   // -> 3 geese
 
 // ==============================================================================
 // 9. Lengths
@@ -128,6 +206,14 @@ const users = {
 //   corresponding string
 // ==============================================================================
 
+const lengths = function(array){
+  const map1 = array.map(function(string){
+    return string.length
+  });
+  console.log(map1)
+}
+
+lengths(["Rooney Mara", "Daniel Craig", "Robin Wright"])
 
 // ==============================================================================
 // 10. Product Array
@@ -240,3 +326,7 @@ const products = [
 // 10c. Using a loop or the .reduce array method (Google "JS reduce"), add up
 // all the products' prices and console.log it
 // ==============================================================================
+
+// const createNewArray = products.map(function(){
+//   products.price
+// })
